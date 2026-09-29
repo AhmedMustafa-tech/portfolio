@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed Mohamed IT Operations</title>
+<meta name="description" content="Ahmed Mohamed, IT Operations Engineer candidate in Cairo. Builds SLA automation, offboarding automation and live IT dashboards with n8n, Jira, Slack and JumpCloud.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ahmed Mohamed">
+<meta property="og:title" content="Ahmed Mohamed - IT Operations Engineer">
+<meta property="og:description" content="IT Operations Engineer in Cairo specializing in SLA automation, offboarding, and IT dashboards.">
+<meta property="og:url" content="https://AhmedMustafa-tech.github.io/portfolio/">
+<meta property="og:image" content="https://AhmedMustafa-tech.github.io/portfolio/preview-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ahmed Mohamed, IT Operations Engineer: I build the systems behind IT support.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ahmed Mohamed - IT Operations Engineer">
+<meta name="twitter:description" content="IT Operations Engineer in Cairo specializing in SLA automation, offboarding, and IT dashboards.">
+<meta name="twitter:image" content="https://AhmedMustafa-tech.github.io/portfolio/preview-image.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2308080A'/><circle cx='16' cy='16' r='12' fill='none' stroke='%238B5CF6' stroke-width='2'/><text x='16' y='21' font-family='sans-serif' font-weight='bold' font-size='12' fill='%23F4F4F5' text-anchor='middle'>AM</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Ahmed Mohamed",
+    "jobTitle": "IT Operations Engineer",
+    "address": {"@type": "PostalAddress","addressLocality": "Cairo","addressCountry": "Egypt"},
+    "sameAs": ["https://www.linkedin.com/in/ahmed-mohamed-9411311a8/"],
+    "knowsAbout": ["IT Operations","Automation","n8n","Jira Service Management","JumpCloud","Google Workspace","OpenAI GPT API"]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#08080A;--bg2:#0D0D10;--card:#111115;--card2:#17171C;
+  --line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.14);
+  --text:#F4F4F5;--muted:#A1A1AA;--dim:#8B8B97;
+  --g1:#FF4D8D;--g2:#FF9F43;--g3:#8B5CF6;
+  --grad:linear-gradient(100deg,var(--g3) 0%,var(--g1) 50%,var(--g2) 100%);
+  --ok:#34D399;--warn:#FBBF24;--bad:#F87171;--signal:#C4B5FD;--ai:#C4B5FD;--signal-soft:rgba(139,92,246,.16);
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --gut:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--g1);outline-offset:3px;border-radius:8px}
+h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.035em;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:var(--gut)}
+.serif{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
+.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono{font-family:var(--mono)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--grad);z-index:90}
+
+/* nav */
+.nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:6px;border:1px solid var(--line2);border-radius:999px;background:rgba(17,17,21,.66);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 10px 40px rgba(0,0,0,.4);max-width:calc(100% - 24px)}
+.nav .me{display:flex;align-items:center;gap:8px;padding:4px 12px 4px 4px;font-weight:600;font-size:14px;white-space:nowrap}
+.nav .me i{width:28px;height:28px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font:600 12px var(--mono);color:#fff;font-style:normal}
+.nav .lk{font-size:13.5px;color:var(--muted);padding:7px 12px;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
+.nav .lk:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.nav .cta{font-size:13.5px;font-weight:500;padding:7px 14px;border-radius:999px;background:var(--text);color:var(--bg);white-space:nowrap}
+@media (max-width:760px){.nav .lk{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:auto;padding:calc(env(safe-area-inset-top,0px) + 130px) 0 60px;overflow:hidden;isolation:isolate}
+.orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.orb.a{width:520px;height:520px;right:-120px;top:40px;background:radial-gradient(circle at 30% 30%,var(--g3),transparent 65%);animation:drift 18s ease-in-out infinite alternate}
+.orb.b{width:420px;height:420px;right:160px;top:220px;background:radial-gradient(circle at 50% 50%,var(--g1),transparent 65%);opacity:.38;animation:drift 22s ease-in-out -6s infinite alternate-reverse}
+.orb.c{width:300px;height:300px;right:0;top:360px;background:radial-gradient(circle,var(--g2),transparent 65%);opacity:.28;animation:drift 26s ease-in-out -3s infinite alternate}
+.hgrid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000,transparent 75%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}}
+.avail{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);padding:6px 14px 6px 8px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.03)}
+.avail b{font-weight:500;color:var(--text)}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--ok);position:relative}
+.pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--ok);animation:pulse 2s ease-out infinite}
+.hero h1{font-size:clamp(46px,7.4vw,104px);line-height:.96;margin-top:26px;font-weight:600}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line > span{display:inline-block;animation:up 1s cubic-bezier(.16,1,.3,1) both}
+.hero h1 .serif{font-size:1.08em;padding-right:.06em}
+.sub{margin-top:26px;font-size:clamp(17px,1.5vw,19px);color:var(--muted);max-width:52ch;animation:fade 1s .5s both}
+.sub b{color:var(--text);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;animation:fade 1s .65s both}
+.b1,.b2{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;font-weight:500;font-size:15px;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s,border-color .2s}
+.b1{background:var(--text);color:var(--bg)}
+.b1:hover{transform:translateY(-2px)}
+.b2{border:1px solid var(--line2);background:rgba(255,255,255,.03)}
+.b2:hover{border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+.b1 svg,.b2 svg{width:16px;height:16px}
+.meta-row{display:flex;flex-wrap:wrap;gap:22px;margin-top:40px;animation:fade 1s .8s both}
+.meta-row div{font-size:13px;color:var(--dim)}
+.meta-row div b{display:block;color:var(--text);font-weight:500;font-size:14.5px}
+
+/* hero notification stack */
+.stackv{position:relative;height:430px;perspective:1200px;animation:fade 1.2s .4s both}
+@media (max-width:980px){.stackv{height:380px;max-width:460px;width:100%;margin:10px auto 0}}
+.nt{position:absolute;left:0;right:0;top:0;margin:auto;width:min(400px,100%);border-radius:18px;padding:16px;background:linear-gradient(180deg,rgba(28,28,34,.92),rgba(18,18,22,.92));border:1px solid var(--line2);box-shadow:0 30px 60px -20px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(10px);transition:transform .9s cubic-bezier(.16,1,.3,1),opacity .9s,filter .9s;transform-origin:50% 0}
+.nt .hd{display:flex;align-items:center;gap:10px}
+.nt .ap{width:34px;height:34px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font:600 13px var(--mono);color:#fff}
+.nt .nm{font-weight:600;font-size:14.5px}
+.nt .nm small{font-weight:400;color:var(--dim);font-size:12px;margin-left:6px}
+.nt .ch{margin-left:auto;font:500 11px var(--mono);color:var(--dim)}
+.nt .tx{margin-top:12px;font-size:14.5px;color:#D4D4D8}
+.nt .box{margin-top:10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:10px 12px;display:grid;gap:3px;position:relative;overflow:hidden}
+.nt .box::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,var(--warn))}
+.nt .box b{font-weight:500;font-size:14px}
+.nt .box span{font-size:12.5px;color:var(--muted)}
+.nt .bt{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.nt .bt span{font-size:12px;font-weight:500;padding:5px 10px;border-radius:8px;border:1px solid var(--line2);color:#E4E4E7}
+.nt .bt span.p{background:var(--text);color:var(--bg);border-color:var(--text)}
+.illus{position:absolute;bottom:0;left:0;right:0;text-align:center;font:400 11.5px var(--mono);color:var(--dim)}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;padding-block:18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mtrack{display:flex;gap:48px;width:max-content;animation:marq 40s linear infinite}
+.mtrack span{font-size:18px;color:var(--dim);font-weight:500;white-space:nowrap;display:inline-flex;align-items:center;gap:48px}
+.mtrack span::after{content:"✦";font-size:11px;color:var(--line2)}
+
+/* sections */
+.sec{padding-block:clamp(80px,11vw,140px) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12.5px var(--mono);color:var(--muted);letter-spacing:.02em}
+.eyebrow::before{content:"";width:18px;height:1px;background:var(--grad)}
+.shead{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:44px}
+.shead h2{font-size:clamp(36px,5.2vw,68px);line-height:1;margin-top:14px;max-width:16ch}
+.shead p{color:var(--muted);max-width:42ch;font-size:16.5px}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.tile{position:relative;grid-column:span 3;border-radius:24px;background:var(--card);border:1px solid var(--line);overflow:hidden;text-align:left;display:flex;flex-direction:column;min-height:420px;transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .3s;isolation:isolate}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:2;pointer-events:none;background:radial-gradient(500px circle at var(--x,50%) var(--y,0%),rgba(255,255,255,.07),transparent 40%);opacity:0;transition:opacity .3s}
+.tile::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;z-index:3;pointer-events:none;background:radial-gradient(360px circle at var(--x,50%) var(--y,0%),rgba(255,120,170,.7),rgba(139,92,246,.4) 40%,transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s}
+.tile:hover::before,.tile:hover::after{opacity:1}
+.tile:hover{transform:translateY(-4px)}
+.tile.w4{grid-column:span 4}.tile.w2{grid-column:span 2}
+@media (max-width:980px){.tile,.tile.w4,.tile.w2{grid-column:span 6}}
+.vis{position:relative;flex:1;min-height:220px;display:grid;place-items:center;padding:26px;overflow:hidden}
+.tbody{padding:0 28px 28px;display:grid;gap:10px;position:relative;z-index:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tg{font:500 11.5px var(--mono);color:var(--muted);border:1px solid var(--line2);border-radius:999px;padding:3px 10px}
+.tile h3{font-size:clamp(24px,2.6vw,32px);line-height:1.08}
+.tile .d{color:var(--muted);font-size:15.5px;max-width:52ch}
+.shows{font:400 12.5px/1.6 var(--mono);color:var(--dim)}
+.shows b{font-weight:500;color:var(--text);margin-right:6px}
+.arrow{position:absolute;top:20px;right:20px;z-index:4;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);background:rgba(8,8,10,.6);backdrop-filter:blur(6px);transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
+.arrow svg{width:16px;height:16px}
+.tile:hover .arrow{transform:rotate(-45deg);background:var(--text);color:var(--bg)}
+
+/* tile visuals */
+.v-atlas{background:radial-gradient(600px 300px at 80% 0%,rgba(139,92,246,.22),transparent 70%),radial-gradient(400px 260px at 10% 100%,rgba(255,77,141,.12),transparent 70%)}
+.mini{width:min(460px,100%);display:grid;gap:10px}
+.mini .nt{position:relative;width:100%;transform:none!important}
+.chain{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chain span{font:500 11.5px var(--mono);padding:5px 10px;border-radius:999px;border:1px solid var(--line2);color:var(--muted);transition:all .4s}
+.chain span.on{color:#fff;border-color:transparent;background:var(--c)}
+.v-off{background:radial-gradient(400px 300px at 50% 0%,rgba(52,211,153,.14),transparent 70%)}
+.clockbig{font:400 italic clamp(64px,8vw,96px)/1 var(--serif);letter-spacing:-.02em}
+.clockbig small{display:block;font:500 11.5px var(--mono);font-style:normal;color:var(--dim);letter-spacing:.04em;margin-top:6px;text-align:center}
+.ticks{display:grid;gap:6px;width:100%;max-width:260px;margin-top:18px}
+.ticks div{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--dim);transition:color .4s}
+.ticks div i{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line2);flex:0 0 auto;display:grid;place-items:center;transition:all .4s}
+.ticks div.on{color:var(--text)}
+.ticks div.on i{background:var(--ok);border-color:var(--ok)}
+.ticks div.on i::after{content:"";width:6px;height:3px;border-left:1.6px solid #062;border-bottom:1.6px solid #062;transform:rotate(-45deg) translate(1px,-1px)}
+.v-dash{background:radial-gradient(500px 280px at 90% 10%,rgba(255,159,67,.16),transparent 70%)}
+.dmock{width:min(440px,100%);border-radius:14px;border:1px solid var(--line2);background:#0B0B0E;box-shadow:0 30px 60px -30px rgba(0,0,0,.8);overflow:hidden;transform:perspective(900px) rotateX(8deg);transform-origin:50% 100%}
+.dm-top{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.dm-top i{width:8px;height:8px;border-radius:50%;background:#2A2A30}
+.dm-top span{margin-left:auto;font:500 10px var(--mono);color:var(--dim)}
+.dm-b{display:grid;grid-template-columns:70px 1fr;min-height:190px}
+.dm-side{border-right:1px solid var(--line);padding:10px;display:grid;gap:8px;align-content:start}
+.dm-side i{height:6px;border-radius:3px;background:#1E1E24}
+.dm-side i:first-child{background:var(--g3);opacity:.6}
+.dm-main{padding:12px;display:grid;gap:10px;align-content:start}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kp div{height:40px;border-radius:8px;background:#141419;border:1px solid var(--line);position:relative;overflow:hidden}
+.kp div::after{content:"";position:absolute;left:8px;bottom:8px;height:6px;border-radius:3px;background:var(--grad);width:var(--w)}
+.spark{height:70px;border-radius:8px;background:#141419;border:1px solid var(--line);position:relative;overflow:hidden}
+.spark svg{position:absolute;inset:0;width:100%;height:100%}
+.spark path{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 3s .3s cubic-bezier(.16,1,.3,1) forwards}
+.v-inc{background:radial-gradient(500px 280px at 20% 0%,rgba(248,113,113,.14),transparent 70%)}
+.ver{display:flex;align-items:center;gap:14px}
+.vpill{font:500 13px var(--mono);padding:12px 16px;border-radius:14px;border:1px solid var(--line2);background:var(--card2);text-align:center;min-width:104px}
+.vpill small{display:block;font-size:10.5px;color:var(--dim);margin-top:2px}
+.vpill.hot{border-color:rgba(248,113,113,.5);box-shadow:0 0 30px -8px rgba(248,113,113,.6)}
+.vpill.good{border-color:rgba(52,211,153,.5);box-shadow:0 0 30px -8px rgba(52,211,153,.6)}
+.vpath{display:grid;gap:4px;justify-items:center;font:500 10.5px var(--mono);color:var(--dim)}
+.vpath i{width:60px;height:1px;background:var(--grad);position:relative}
+.vpath i::after{content:"";position:absolute;right:-1px;top:-3px;border:3.5px solid transparent;border-left:6px solid var(--g2)}
+.rcb{margin-top:18px;font:500 11.5px var(--mono);color:var(--warn);border:1px dashed rgba(251,191,36,.45);border-radius:999px;padding:5px 12px}
+
+/* changelog */
+.log2{margin-top:14px;border:1px solid var(--line);border-radius:24px;background:var(--card);overflow:hidden}
+.log2 .lhd{display:flex;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--line);font:500 12.5px var(--mono);color:var(--muted)}
+.row{display:grid;grid-template-columns:140px 1fr 1.6fr;gap:20px;padding:18px 24px;border-bottom:1px solid var(--line);align-items:baseline;transition:background .25s}
+.row:last-child{border-bottom:0}
+.row:hover{background:rgba(255,255,255,.025)}
+.row .cr{font:500 12.5px var(--mono);color:var(--g2)}
+.row h4{font-size:16.5px;font-weight:500;letter-spacing:-.01em}
+.row p{color:var(--muted);font-size:14.5px}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:4px}}
+
+/* slack reel */
+.reel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gut) 20px;margin-inline:calc(var(--gut) * -1);scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.reel .nt{position:relative;flex:0 0 min(380px,84vw);scroll-snap-align:center;transform:none}
+.reelnav{display:flex;gap:8px}
+.reelnav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;transition:background .2s}
+.reelnav button:hover{background:rgba(255,255,255,.06)}
+.tbl{margin-top:10px;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+.tbl div{display:flex;justify-content:space-between;padding:6px 12px;border-top:1px solid var(--line);color:#D4D4D8}
+.tbl div:first-child{border-top:0;background:rgba(255,255,255,.04);font-weight:500}
+
+/* trouble */
+.trb{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.trb{grid-template-columns:1fr}}
+.tc{border-radius:20px;border:1px solid var(--line);background:var(--card);padding:24px;display:grid;gap:10px;align-content:start;text-align:left;transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1)}
+button.tc:hover{border-color:var(--line2);transform:translateY(-3px)}
+.tc .st{display:flex;align-items:center;gap:8px;font:500 11.5px var(--mono);color:var(--muted)}
+.tc .st i{width:7px;height:7px;border-radius:50%}
+.tc h3{font-size:21px;letter-spacing:-.02em}
+.tc p{color:var(--muted);font-size:14.5px}
+.tc .more{font-size:13.5px;font-weight:500;margin-top:4px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:980px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+.sk{border-radius:20px;border:1px solid var(--line);background:var(--card);padding:24px;display:flex;flex-direction:column;gap:14px;min-height:320px}
+.sk .n{font:400 italic 54px/1 var(--serif)}
+.sk h3{font-size:21px;letter-spacing:-.02em}
+.sk ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.sk li{font-size:14.5px;color:var(--muted);padding-left:16px;position:relative}
+.sk li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:1px;background:var(--muted)}
+.sk .tools{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
+.sk .tools span{font:500 11.5px var(--mono);color:var(--text);background:rgba(255,255,255,.05);border-radius:6px;padding:3px 8px}
+
+/* journey */
+.jr{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.jr::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line2)}
+.jfill{position:absolute;left:0;top:9px;height:1px;width:0;background:var(--grad);transition:width 1.8s cubic-bezier(.16,1,.3,1)}
+.jr.in .jfill{width:100%}
+.js{position:relative;padding:34px 18px 0 0}
+.js::before{content:"";position:absolute;left:0;top:3px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:1.5px solid var(--line2);transition:all .5s}
+.jr.in .js::before{border-color:var(--g1);background:var(--g1);box-shadow:0 0 0 5px rgba(255,77,141,.15)}
+.js .t{font:500 12px var(--mono);color:var(--dim)}
+.js h4{font-size:17px;letter-spacing:-.015em;margin-top:6px}
+.js p{font-size:14px;color:var(--muted);margin-top:6px}
+@media (max-width:900px){.jr{grid-template-columns:1fr}.jr::before,.jfill{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}.jfill{height:0;transition:height 1.8s}.jr.in .jfill{height:100%;width:1px}.js{padding:0 0 26px 34px}}
+.quote{margin-top:64px;font:400 italic clamp(30px,4.4vw,56px)/1.08 var(--serif);max-width:22ch}
+
+/* faq */
+.faqg{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+@media (max-width:900px){.faqg{grid-template-columns:1fr}}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-size:18px;font-weight:500;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:0 0 28px;height:28px;border-radius:50%;border:1px solid var(--line2);position:relative;transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--text);transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i{transform:rotate(45deg);background:rgba(255,255,255,.06)}
+.faq p{padding:0 0 22px;color:var(--muted);max-width:62ch}
+
+/* contact */
+.cta-big{position:relative;margin-top:clamp(80px,11vw,140px);border-radius:32px;overflow:hidden;padding:clamp(40px,7vw,90px) clamp(24px,5vw,64px);border:1px solid var(--line2);isolation:isolate;background:var(--card)}
+.cta-big .o1{position:absolute;z-index:-1;width:600px;height:600px;right:-160px;top:-260px;border-radius:50%;filter:blur(80px);background:radial-gradient(circle,var(--g1),transparent 65%);opacity:.45}
+.cta-big .o2{position:absolute;z-index:-1;width:500px;height:500px;left:-160px;bottom:-300px;border-radius:50%;filter:blur(80px);background:radial-gradient(circle,var(--g3),transparent 65%);opacity:.5}
+.cta-big h2{font-size:clamp(40px,6.4vw,88px);line-height:.98;max-width:14ch}
+.cta-big p{margin-top:20px;color:#D4D4D8;max-width:48ch;font-size:17px}
+.cta-big .ctas{animation:none}
+footer{padding-block:48px calc(env(safe-area-inset-bottom,0px) + 40px);font-size:13px;color:var(--dim)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* case overlay */
+.ov{position:fixed;inset:0;z-index:80;background:rgba(5,5,7,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s}
+.ov.show{opacity:1}
+.panel{position:fixed;z-index:81;inset:calc(env(safe-area-inset-top,0px) + 16px) 16px 0;max-width:980px;margin:0 auto;border-radius:28px 28px 0 0;background:var(--bg2);border:1px solid var(--line2);border-bottom:0;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .6s cubic-bezier(.16,1,.3,1);overflow:hidden}
+.panel.show{transform:none}
+@media (max-width:600px){.panel{inset:calc(env(safe-area-inset-top,0px) + 8px) 0 0;border-radius:22px 22px 0 0}}
+.phd{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);font:500 12.5px var(--mono);color:var(--dim)}
+.phd .x{margin-left:auto;width:38px;height:38px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center}
+.phd .x:hover{background:rgba(255,255,255,.06)}
+.pbody{overflow-y:auto;overscroll-behavior:contain;padding:36px clamp(20px,5vw,56px) calc(env(safe-area-inset-bottom,0px) + 60px)}
+.pbody > *{animation:fade .6s both}
+.ptitle{font-size:clamp(32px,5vw,58px);line-height:1.02;max-width:18ch}
+.pmeta{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.pchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pchips span{font:500 12px var(--mono);color:var(--muted);background:rgba(255,255,255,.05);border-radius:6px;padding:3px 9px}
+.outs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:28px}
+.out{border-radius:16px;border:1px solid var(--line);background:var(--card);padding:18px;font-size:15px}
+.out .l{display:block;font:500 11.5px var(--mono);margin-bottom:8px}
+.out .l{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.jump{display:flex;gap:6px;overflow-x:auto;margin:28px 0 0;padding-bottom:6px;scrollbar-width:none;position:sticky;top:-37px;background:var(--bg2);z-index:2;padding-top:12px}
+.jump a{font:500 12px var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.jump a:hover{color:var(--text);border-color:var(--line2)}
+.dsec{margin-top:44px;display:grid;grid-template-columns:180px 1fr;gap:12px 32px}
+.dsec > h4{font:500 12.5px var(--mono);color:var(--dim);letter-spacing:.02em;padding-top:4px}
+.dsec > *:not(h4){grid-column:2}
+@media (max-width:760px){.dsec{grid-template-columns:1fr}.dsec > *:not(h4){grid-column:1}}
+.dsec p{color:#D4D4D8;font-size:16.5px;max-width:64ch}
+.dsec ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.dsec li{position:relative;padding-left:22px;color:#D4D4D8;font-size:15.5px}
+.dsec li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--grad)}
+.lanes{display:grid;gap:14px;border-radius:18px;border:1px solid var(--line);background:var(--card);padding:18px;overflow-x:auto}
+.lane .ll{font:500 11.5px var(--mono);color:var(--dim);margin-bottom:8px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.nd{font-size:13px;font-weight:500;padding:7px 11px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);white-space:nowrap}
+.nd.ai{border-color:rgba(196,181,253,.5);box-shadow:0 0 20px -8px var(--g3)}
+.nd.src{border-color:rgba(255,159,67,.45)}
+.cn{width:24px;height:1px;background:repeating-linear-gradient(90deg,var(--g1) 0 4px,transparent 4px 8px);background-size:16px 1px;animation:dash 1s linear infinite}
+.log{border-radius:16px;border:1px solid var(--line);background:var(--card);padding:18px;display:grid;gap:8px}
+.log .lh{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.log .lh b{font:500 11.5px var(--mono);color:var(--g2)}
+.log .lh span{font-weight:600;font-size:16px;letter-spacing:-.01em}
+.log p{font-size:14.5px!important;color:var(--muted)!important}
+.log p i{font:500 11px var(--mono);font-style:normal;color:var(--dim);text-transform:uppercase;margin-right:8px}
+.tline{display:grid;border-left:1px solid var(--line2);margin-left:5px}
+.tline div{position:relative;padding:0 0 16px 20px;color:#D4D4D8;font-size:15px}
+.tline div::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--g1)}
+.tline div b{display:block;font:500 12px var(--mono);color:var(--dim)}
+.next{border:1px dashed var(--line2);border-radius:14px;padding:14px 16px;color:#D4D4D8;font-size:15px}
+.next b{font:500 11px var(--mono);color:var(--warn);margin-right:8px}
+.tag{font:500 11.5px var(--mono);color:var(--muted);border:1px solid var(--line2);border-radius:999px;padding:3px 10px;display:inline-block}
+.tag.warn{color:var(--warn);border-color:rgba(251,191,36,.45)}
+.note{font:400 12.5px var(--mono);color:var(--dim)}
+.sm{display:flex;flex-wrap:wrap;gap:6px}
+.sm .s{font:500 12px var(--mono);border:1px solid var(--line2);border-radius:999px;padding:5px 11px;color:var(--muted);transition:all .4s}
+.sm .s.on{color:#fff;border-color:transparent}
+.sm .ar{color:var(--dim);font:400 12px var(--mono)}
+.clock{font:400 italic 40px/1 var(--serif)}
+.check{display:grid;gap:6px}
+.check div{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--muted);border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--card);transition:color .3s}
+.check .cb{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line2);display:grid;place-items:center;flex:0 0 auto;transition:all .3s}
+.check .cb svg{width:11px;height:11px;stroke:#052;opacity:0}
+.check div.done{color:var(--text)}.check div.done .cb{background:var(--ok);border-color:var(--ok)}.check div.done .cb svg{opacity:1}
+.check div.man .cb{border-style:dashed;border-color:var(--warn)}
+.shows.p{margin-top:18px}
+.pnext{margin-top:56px;display:flex;justify-content:flex-end}
+
+.v-mail{background:radial-gradient(500px 280px at 80% 0%,rgba(52,211,153,.12),transparent 70%),radial-gradient(400px 260px at 0% 100%,rgba(139,92,246,.14),transparent 70%)}
+.mailvis{width:min(440px,100%);display:grid;gap:14px}
+.mroute{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:nowrap}
+.mnode{display:inline-flex;align-items:center;height:36px;line-height:1;font:500 12px var(--mono);padding:0 12px;border-radius:12px;border:1px solid var(--line2);background:var(--card2);white-space:nowrap}
+.mnode.msub{border-color:rgba(196,181,253,.5);box-shadow:0 0 24px -8px var(--g3)}
+.mnode.inbox{border-color:rgba(52,211,153,.5);box-shadow:0 0 24px -8px var(--ok)}
+.mwire{position:relative;flex:1 1 28px;min-width:18px;max-width:54px;height:1px;background:var(--line2)}
+.mwire i{position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:var(--g1);box-shadow:0 0 10px var(--g1);animation:mflow 1.6s linear infinite}
+@keyframes mflow{from{left:0;opacity:0}20%{opacity:1}80%{opacity:1}to{left:calc(100% - 7px);opacity:0}}
+.dns{border-radius:14px;border:1px solid var(--line2);background:#0B0B0E;overflow:hidden}
+.dns div{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;padding:9px 12px;border-top:1px solid var(--line);font:500 12px var(--mono)}
+.dns div:first-child{border-top:0}
+.dns .rec{color:var(--text)}
+.dns .val{color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.okp{color:var(--ok);border:1px solid rgba(52,211,153,.4);border-radius:999px;padding:2px 8px;font-size:11px}
+@media (max-width:420px){.mnode{font-size:11px;padding:8px 9px}}
+.tile.w6{grid-column:span 6;flex-direction:row;min-height:360px}
+.tile.w6 .vis{flex:1.15}
+.tile.w6 .tbody{flex:1;align-self:center;padding:28px 72px 28px 8px}
+@media (max-width:980px){.tile.w6{flex-direction:column}.tile.w6 .tbody{padding:0 28px 28px}}
+.v-mfa{background:radial-gradient(500px 300px at 20% 0%,rgba(139,92,246,.2),transparent 70%),radial-gradient(400px 260px at 100% 100%,rgba(52,211,153,.1),transparent 70%)}
+.mfavis{width:min(520px,100%);display:grid;gap:14px}
+.phs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.phs div{font:500 11px var(--mono);color:var(--dim);text-align:center;border:1px solid var(--line);border-radius:10px;padding:8px 4px;background:var(--card2);transition:all .4s}
+.phs div b{display:block;font-weight:500;color:var(--muted);margin-bottom:2px}
+.phs div.on{color:var(--text);border-color:rgba(196,181,253,.5)}
+.phs div.on b{color:var(--g1)}
+.pbar{height:4px;border-radius:2px;background:var(--line2);overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--grad);transition:width .8s cubic-bezier(.16,1,.3,1)}
+.devs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dv{font:500 13px var(--sans);border:1px solid var(--line2);border-radius:12px;padding:12px;background:#0B0B0E}
+.dv small{display:block;font:400 11px var(--mono);color:var(--dim);margin-top:4px}
+.dv.ok{font:400 italic 28px/1 var(--serif);color:var(--ok);border-color:rgba(52,211,153,.4)}
+@media (max-width:520px){.phs{grid-template-columns:repeat(3,1fr)}.devs{grid-template-columns:1fr 1fr}.dv.ok{grid-column:span 2}}
+.cat{font:500 11.5px var(--mono);border-radius:999px;padding:3px 10px 3px 8px;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);color:var(--text)}
+.cat::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cc)}
+.c-ops{--cc:#60A5FA}.c-sec{--cc:#34D399}.c-auto{--cc:#FF4D8D}.c-ai{--cc:#C4B5FD}.c-rep{--cc:#FF9F43}.c-inc{--cc:#F87171}
+.ops2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:980px){.ops2{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.ops2{grid-template-columns:1fr}}
+.oc{border-radius:20px;border:1px solid var(--line);background:var(--card);padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .3s,transform .4s cubic-bezier(.16,1,.3,1)}
+.oc:hover{border-color:var(--line2);transform:translateY(-3px)}
+.oc .oi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.25)}
+.oc .oi svg{width:19px;height:19px;stroke:#93C5FD}
+.oc h3{font-size:19px;letter-spacing:-.02em}
+.oc p{color:var(--muted);font-size:14.5px}
+.oc .own{margin-top:auto;padding-top:10px;font:500 11.5px var(--mono);color:var(--dim);border-top:1px solid var(--line)}
+.oc .own b{color:var(--text);font-weight:500}
+/* reveal */
+.rv{transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.rv.pre{opacity:.25;transform:translateY(28px)}
+
+@keyframes up{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-80px,60px) scale(1.12)}}
+@keyframes pulse{from{transform:scale(.6);opacity:1}to{transform:scale(1.8);opacity:0}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes dash{to{background-position:16px 0}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv.pre{opacity:1;transform:none}
+  .spark path{stroke-dashoffset:0}
+}
+</style>
+
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" id="prog" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Main">
+  <a class="me" href="#top"><i>AM</i>Ahmed Mohamed</a>
+  <a class="lk" href="#work">Work</a>
+  <a class="lk" href="#operations">Operations</a>
+  <a class="lk" href="#slack">In Slack</a>
+  <a class="lk" href="#skills">Skills</a>
+  <a class="lk" href="#journey">Journey</a>
+  <a class="cta" href="https://www.linkedin.com/in/ahmed-mohamed-9411311a8/" target="_blank" rel="noopener">LinkedIn ↗</a>
+</nav>
+
+<main id="top">
+<header class="hero">
+  <div class="hgrid" aria-hidden="true"></div>
+  <div class="orb a" aria-hidden="true"></div><div class="orb b" aria-hidden="true"></div><div class="orb c" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="avail"><span class="pulse"></span>Open to <b>IT Operations Engineer</b> roles</span>
+      <h1>
+        <span class="line"><span>I build the</span></span>
+        <span class="line"><span style="animation-delay:.08s"><span class="serif gt">systems</span> behind</span></span>
+        <span class="line"><span style="animation-delay:.16s">IT support.</span></span>
+      </h1>
+      <p class="sub">I'm Ahmed, an IT Helpdesk Engineer at a Gulf fintech, based in Cairo. <b>I run IT operations across two regional service desks</b>, from onboarding and access to incidents and security rollouts, <b>and I build the automation that makes them scale.</b></p>
+      <div class="ctas">
+        <a class="b1" href="#work">View case studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="b2" href="https://www.linkedin.com/in/ahmed-mohamed-9411311a8/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="b2" href="ahmed-mohamed-cv.pdf" download="Ahmed_Mohamed_IT_Ops_CV.pdf">Download CV (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="meta-row">
+        <div><b>Cairo, Egypt</b>Location</div>
+        <div><b>2 regional service desks</b>Current scope</div>
+        <div><b>Built solo</b>Every system shown</div>
+      </div>
+    </div>
+    <div class="stackv" id="stackv" aria-label="Example notifications from my automations">
+      <div class="nt" style="--c:var(--warn)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>10:02</small></span><span class="ch">DM</span></div>
+        <div class="tx">Heads-up: this ticket is close to its SLA deadline.</div>
+        <div class="box"><b>Laptop not charging after update</b><span>In progress · assigned to you</span></div>
+        <div class="bt"><span class="p">Summary</span><span>Next action</span><span>Related SOP</span><span>Remind in 1h</span></div></div>
+      <div class="nt" style="--c:var(--ok)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>18:00</small></span><span class="ch">#it-offboarding</span></div>
+        <div class="tx">Offboarding complete. Access removed across every core system.</div>
+        <div class="box"><b>Still to confirm</b><span>Collect laptop (asset tag + serial listed) · Internal tools</span></div>
+        <div class="bt"><span class="p">Laptop collected</span><span class="p">Tools deactivated</span></div></div>
+      <div class="nt" style="--c:var(--bad)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>09:00</small></span><span class="ch">#it-sla-escalations</span></div>
+        <div class="tx">🔒 Security Approval SLA: over 3 days</div>
+        <div class="box"><b>Tickets past the security-approval hold</b><span>Both regions · worst first</span></div>
+        <div class="bt"><span>Open the sheet</span></div></div>
+      <div class="nt" style="--c:var(--g3)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>11:40</small></span><span class="ch">DM</span></div>
+        <div class="tx">Here's the approved procedure for temporary admin rights:</div>
+        <div class="box"><b>SOP · 3 steps</b><span>Confirm approval → grant time-limited rights → log expiry</span></div></div>
+      <span class="illus">Recreated examples · no real data</span>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-label="Tools I use">
+  <div class="mtrack" id="mtrack"></div>
+</div>
+
+<div class="wrap">
+  <section class="sec" id="work">
+    <div class="shead rv">
+      <div><span class="eyebrow">Selected work</span><h2>Security, operations and the <span class="serif gt">automation</span> behind them.</h2></div>
+      <p>From a company-wide security rollout to the systems that replaced manual work. Open one to see the problem, what I did, what broke and how I fixed it.</p>
+    </div>
+    <div class="bento">
+      <button class="tile w6 rv" data-open="mfa">
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="vis v-mfa"><div class="mfavis" aria-hidden="true">
+          <div class="phs" id="phs"><div><b>01</b>Assess</div><div><b>02</b>IT pilot</div><div><b>03</b>User pilot</div><div><b>04</b>Waves</div><div><b>05</b>Executives</div><div><b>06</b>Verify</div></div>
+          <div class="pbar"><i id="pfill"></i></div>
+          <div class="devs"><span class="dv">macOS<small>password + authenticator</small></span><span class="dv">Windows<small>password + authenticator</small></span><span class="dv ok">0<small>permanent lockouts</small></span></div>
+        </div></div>
+        <div class="tbody">
+          <div class="tags"><span class="cat c-sec">Security</span><span class="cat c-ops">Operations</span><span class="tg">JumpCloud</span><span class="tg">MFA</span><span class="tg">macOS &amp; Windows</span><span class="tg">3 entities</span></div>
+          <h3>Company-wide device MFA rollout</h3>
+          <p class="d">I planned and ran endpoint MFA for every company laptop across three entities, in response to a regulatory audit observation. Phased waves, a tested recovery path, and zero permanent lockouts.</p>
+          <p class="shows"><b>Shows</b>identity security · phased change management · vendor escalation · compliance</p>
+        </div>
+      </button>
+      <button class="tile w4 rv" data-open="atlas">
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="vis v-atlas"><div class="mini">
+          <div class="nt" style="--c:var(--warn)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>now</small></span><span class="ch">GPT</span></div>
+            <div class="tx">You have 3 tickets near SLA. Focus on the oldest first.</div>
+            <div class="bt"><span class="p">Focus today</span><span>Near SLA</span><span>Approval blockers</span><span>Quick wins</span></div></div>
+          <div class="chain" id="chain"></div>
+        </div></div>
+        <div class="tbody">
+          <div class="tags"><span class="cat c-auto">Automation</span><span class="cat c-ai">AI</span><span class="tg">AI · OpenAI GPT</span><span class="tg">n8n</span><span class="tg">Jira</span><span class="tg">Slack</span></div>
+          <h3>Atlas: AI-assisted SLA follow-up in Slack</h3>
+          <p class="d">At-risk tickets reach the engineer before they breach, stalled ones escalate on their own, and anyone can ask about the queues in plain language. <b style="color:var(--text);font-weight:500">No SLA risk goes unflagged:</b> monitoring runs across 2 regional queues on a schedule.</p>
+          <p class="shows"><b>Shows</b>system design · API integration · LLM guardrails · reliability debugging</p>
+        </div>
+      </button>
+      <button class="tile w2 rv" data-open="offboarding">
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="vis v-off"><div style="display:grid;justify-items:center">
+          <div class="clockbig">18:00<small>LAST WORKING DAY</small></div>
+          <div class="ticks" id="ticks"><div><i></i>Directory account deleted</div><div><i></i>SSO groups removed</div><div><i></i>Google suspended</div><div><i></i>Jira &amp; Slack deactivated</div><div><i></i>Record posted to ticket</div></div>
+        </div></div>
+        <div class="tbody">
+          <div class="tags"><span class="cat c-sec">Security</span><span class="cat c-auto">Automation</span><span class="tg">JumpCloud</span><span class="tg">Google</span></div>
+          <h3>Same-day offboarding</h3>
+          <p class="d"><b style="color:var(--text);font-weight:500">14 manual steps → 0.</b> It runs itself at 18:00; people only tap 2 confirmations.</p>
+          <p class="shows"><b>Shows</b>identity &amp; access · security controls</p>
+        </div>
+      </button>
+      <button class="tile rv" data-open="dashboard">
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="vis v-dash"><div class="dmock" aria-hidden="true">
+          <div class="dm-top"><i></i><i></i><i></i><span>refreshed hourly</span></div>
+          <div class="dm-b"><div class="dm-side"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="dm-main"><div class="kp"><div style="--w:60%"></div><div style="--w:38%"></div><div style="--w:74%"></div></div>
+              <div class="spark"><svg viewBox="0 0 300 70" preserveAspectRatio="none"><defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".5" stop-color="#FF4D8D"/><stop offset="1" stop-color="#FF9F43"/></linearGradient></defs><path d="M0 52 C30 48 45 30 70 34 S110 56 140 40 S190 12 220 22 S270 30 300 14" fill="none" stroke="url(#sg)" stroke-width="2"/></svg></div>
+            </div></div>
+        </div></div>
+        <div class="tbody">
+          <div class="tags"><span class="cat c-rep">Reporting</span><span class="cat c-auto">Automation</span><span class="tg">Jira API</span><span class="tg">n8n</span><span class="tg">React</span></div>
+          <h3>Executive IT dashboard</h3>
+          <p class="d">Reporting went from <b style="color:var(--text);font-weight:500">1× a month to 24× a day</b>, and from 1 region to 2, in one live view for leadership.</p>
+          <p class="shows"><b>Shows</b>data pipelines · leadership reporting · root-cause debugging</p>
+        </div>
+      </button>
+      <button class="tile rv" data-open="email">
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="vis v-mail"><div class="mailvis" aria-hidden="true">
+          <div class="mroute"><span class="mnode">Bulk sender</span><span class="mwire"><i></i></span><span class="mnode msub">mail.subdomain</span><span class="mwire"><i style="animation-delay:.6s"></i></span><span class="mnode inbox">Inbox</span></div>
+          <div class="dns">
+            <div><span class="rec">SPF</span><span class="val">v=spf1 include:… ~all</span><span class="okp">pass</span></div>
+            <div><span class="rec">DKIM</span><span class="val">selector._domainkey</span><span class="okp">pass</span></div>
+            <div><span class="rec">DMARC</span><span class="val">v=DMARC1; p=…; rua=…</span><span class="okp">aligned</span></div>
+          </div>
+        </div></div>
+        <div class="tbody">
+          <div class="tags"><span class="cat c-ops">Operations</span><span class="cat c-inc">Incident</span><span class="tg">Email Infrastructure</span><span class="tg">BigQuery</span><span class="tg">Google Workspace</span><span class="tg">DNS (SPF/DKIM/DMARC)</span></div>
+          <h3>Email Deliverability &amp; Domain Authentication</h3>
+          <p class="d">I coordinated a P0 blocklisting of the corporate domain. My domain-wide sender audit in BigQuery found the dominant bulk sender, and bulk mail moved onto dedicated, authenticated subdomains.</p>
+          <p class="shows"><b>Shows</b>domain infrastructure · log analysis · BigQuery · vendor &amp; cross-team coordination</p>
+        </div>
+      </button>
+    </div>
+
+    <div class="log2 rv">
+      <div class="lhd"><span>Also built</span><span>schedule</span></div>
+      <div id="rows"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="slack">
+    <div class="shead rv">
+      <div><span class="eyebrow">In Slack</span><h2>The work shows up where people <span class="serif gt">already are.</span></h2></div>
+      <div class="reelnav"><button id="rPrev" aria-label="Previous message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button><button id="rNext" aria-label="Next message"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="reel rv" id="reel" tabindex="0" aria-label="Example Slack messages">
+      <div class="nt" style="--c:var(--warn)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>10:02</small></span><span class="ch">SLA heads-up</span></div><div class="tx">This ticket is close to its SLA deadline.</div><div class="box"><b>Laptop not charging after update</b><span>In progress · assigned to you</span></div><div class="bt"><span class="p">Summary</span><span>Next action</span><span>Related SOP</span><span>Open in Jira</span></div></div>
+      <div class="nt" style="--c:var(--g3)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>11:40</small></span><span class="ch">SOP answer</span></div><div class="tx">"How do I give a user admin rights to install software?"</div><div class="box"><b>Approved procedure</b><span>1. Confirm line-manager approval<br>2. Grant time-limited admin rights<br>3. Log the grant and expiry on the ticket</span></div></div>
+      <div class="nt" style="--c:var(--g1)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>14:15</small></span><span class="ch">Manager view</span></div><div class="tx">Open tickets by assignee, this month:</div><div class="tbl"><div><span>Assignee</span><span>Open</span></div><div><span>Engineer A</span><span>·</span></div><div><span>Engineer B</span><span>·</span></div><div><span>Engineer C</span><span>·</span></div></div></div>
+      <div class="nt" style="--c:var(--ok)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>18:00</small></span><span class="ch">Offboarding</span></div><div class="tx">Offboarding complete for Example Employee.</div><div class="box"><b>Access removed</b><span>Directory · SSO groups · Google · Jira · Slack · phone wiped</span></div><div class="bt"><span class="p">Laptop collected</span><span class="p">Tools deactivated</span></div></div>
+      <div class="nt" style="--c:var(--bad)"><div class="hd"><span class="ap">A</span><span class="nm">Atlas<small>09:00</small></span><span class="ch">Escalation</span></div><div class="tx">🔒 Security Approval SLA: over 3 days</div><div class="box"><b>Tickets past the security-approval hold</b><span>Both regions · sorted worst first</span></div><div class="bt"><span>Open the sheet</span></div></div>
+    </div>
+    <p class="note">Recreated from my workflows. Ticket details and names are examples.</p>
+  </section>
+
+  <section class="sec" id="operations">
+    <div class="shead rv">
+      <div><span class="eyebrow">Operations</span><h2>The operation I <span class="serif gt">run</span> every day.</h2></div>
+      <p>The automation only works because I know the day-to-day job. This is the operations side of my role.</p>
+    </div>
+    <div class="ops2">
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v11H3z"/><path d="M8 20h8M12 16v4"/></svg></span><h3>Service desk, two regions</h3><p>I work tickets across both regional queues every day: access requests, accounts, devices and mobile setup. It’s also where I find what to automate next.</p><span class="own">Role · <b>Own my queue</b></span></div>
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><h3>Onboarding waves &amp; devices</h3><p>I coordinate Egypt onboarding waves: collect the joiner list, get CRM, contact-centre and VPN accounts created by the owning teams, and allocate laptops. I flag upstream gaps, like late account requests, to HR.</p><span class="own">Role · <b>Coordinator for Egypt</b></span></div>
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><h3>Hardware procurement</h3><p>When stock runs short before a joiner batch, I raise purchase requests with justification, quantities, quotes, a comparison of options and a recommendation, through the approval chain.</p><span class="own">Role · <b>Initiator</b></span></div>
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>Identity &amp; access</h3><p>I administer JumpCloud across two orgs and Google Workspace: accounts, groups, device binding, MFA resets, licensing checks and email delivery tracing.</p><span class="own">Role · <b>Operator</b></span></div>
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span><h3>Incident coordination</h3><p>I’ve coordinated a P0 email blocklisting and a CRM outage for support agents: bringing security, platform owners and business teams together, tracking affected users, and writing the RCA with an evidence log.</p><span class="own">Role · <b>Incident owner / coordinator</b></span></div>
+      <div class="oc rv"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h3>Vendor escalations</h3><p>I take problems to vendors with evidence: a device-MFA enforcement gap and a Windows biometric conflict with JumpCloud, and licensing paths through our Google reseller.</p><span class="own">Role · <b>Escalation owner</b></span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="trouble">
+    <div class="shead rv">
+      <div><span class="eyebrow">Troubleshooting</span><h2>Find the real cause, and say so when it <span class="serif gt">isn't proven.</span></h2></div>
+    </div>
+    <div class="trb">
+      <button class="tc rv" data-open="browser"><span class="st"><i style="background:var(--warn)"></i>Incident · root cause not conclusively confirmed</span><h3>CRM freezing for support agents</h3><p>Agents' CRM froze and forced them offline. Network and vendor-side fixes failed, so I rolled Chrome back through JumpCloud, locked auto-update so patching couldn't undo it, then managed the return to the fixed version.</p><span class="more">Read the incident →</span></button>
+      <div class="tc rv"><span class="st"><i style="background:var(--ok)"></i>DNS · mail routing · P0 incident</span><h3>Customer replies bouncing after the domain migration</h3><p>During a P0 blocklisting incident, support mail moved to a new sending subdomain. Outbound worked, but customer replies started bouncing with "domain not found". I traced it to the subdomain having SPF and DKIM for sending but no MX records for receiving. We verified the subdomain in Google Workspace, added MX and routing to forward replies into the existing inbox, and confirmed replies were landing again the next day.</p></div>
+      <div class="tc rv"><span class="st"><i style="background:var(--ok)"></i>Identity · MFA rollout</span><h3>Locked out by their own shortcut</h3><p>Midway through the company-wide device MFA rollout, two groups started failing to log in: people who had set up an authenticator alongside a security key and later deleted the app, and people who had only ever used Touch ID and no longer knew their password. I identified both patterns, built MFA-reset and credential-recovery procedures for them, and kept the rollout at zero permanent lockouts.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="skills">
+    <div class="shead rv">
+      <div><span class="eyebrow">Skills</span><h2>What I bring to an <span class="serif gt">IT Ops</span> team.</h2></div>
+      <p>Evidence over badges. Every tool listed here is used in the work above.</p>
+    </div>
+    <div class="skills">
+      <div class="sk rv"><span class="n gt">01</span><h3>IT Operations</h3><ul><li>Tickets, access &amp; accounts</li><li>Onboarding waves &amp; device allocation</li><li>Hardware procurement requests</li><li>Endpoint troubleshooting</li></ul><div class="tools"><span>Jira SM</span><span>JumpCloud</span><span>Google Admin</span><span>macOS</span><span>PowerShell</span></div></div>
+      <div class="sk rv"><span class="n gt">02</span><h3>Automation</h3><ul><li>SLA reminders &amp; escalation</li><li>Same-day offboarding</li><li>Scheduled reports</li><li>Self-cleaning trackers</li></ul><div class="tools"><span>n8n</span><span>JavaScript</span><span>Jira API</span><span>JQL</span><span>Slack API</span><span>Sheets API</span></div></div>
+      <div class="sk rv"><span class="n gt">03</span><h3>AI-assisted support</h3><ul><li>Plain-language queue answers</li><li>Approved SOP responses</li><li>Deterministic output guardrails</li><li>Manager views on demand</li></ul><div class="tools"><span>OpenAI GPT</span><span>Slack</span><span>AI coding assistants</span></div></div>
+      <div class="sk rv"><span class="n gt">04</span><h3>Reporting &amp; incidents</h3><ul><li>Hourly leadership dashboard</li><li>Data pipelines to JSON</li><li>Incident coordination</li><li>RCAs that state uncertainty</li></ul><div class="tools"><span>React</span><span>Notion API</span><span>BigQuery</span><span>SPF/DKIM/DMARC</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="journey">
+    <div class="shead rv">
+      <div><span class="eyebrow">Journey</span><h2>From working the queue to building <span class="serif gt">the systems behind it.</span></h2></div>
+    </div>
+    <div class="jr" id="jr"><div class="jfill"></div></div>
+    <p class="quote rv">"Work the queue long enough and you see which loops should never be manual again."</p>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="faqg">
+      <div class="rv"><span class="eyebrow">FAQ</span><h2 style="font-size:clamp(34px,4.6vw,60px);line-height:1;margin-top:14px">Questions I <span class="serif gt">get asked.</span></h2></div>
+      <div class="faq rv">
+        <details><summary>Why aren't there exact figures?<i></i></summary><p>My employer's operational data isn't mine to publish, so I show scope and before → after ratios instead: how often, how many steps, how many regions. I'm happy to talk through results in an interview where that's appropriate.</p></details>
+        <details><summary>Did you build these alone?<i></i></summary><p>Yes. I designed, built and maintain Atlas, the dashboard, the offboarding automation and the smaller workflows myself. Colleagues gave feedback and approvals, and other teams owned the systems I integrated with.</p></details>
+        <details><summary>How do you use AI?<i></i></summary><p>In two ways. Atlas uses OpenAI GPT to answer queue questions and return approved procedures. And I use AI coding assistants to build faster. The design decisions, debugging and verification are mine.</p></details>
+        <details><summary>What would you automate first on a new team?<i></i></summary><p>The loop people repeat most by hand, usually SLA follow-up or offboarding. I'd map it step by step, automate the repeatable parts with read-only access first, and verify results at the destination before calling it done.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-big rv" id="contact">
+    <div class="o1" aria-hidden="true"></div><div class="o2" aria-hidden="true"></div>
+    <span class="eyebrow">Contact</span>
+    <h2 style="margin-top:16px">Hiring an <span class="serif">IT Operations</span> Engineer?</h2>
+    <p>I'm based in Cairo and open to IT Operations Engineer roles. Message me on LinkedIn or download my CV.</p>
+    <div class="ctas" style="margin-top:30px">
+      <a class="b1" href="https://www.linkedin.com/in/ahmed-mohamed-9411311a8/" target="_blank" rel="noopener">Message me on LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="b2" href="ahmed-mohamed-cv.pdf" download="Ahmed_Mohamed_IT_Ops_CV.pdf">Download CV (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      <button class="b2" id="copyEmail" type="button" hidden>Copy email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      <span class="note" id="emailTxt" hidden></span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ahmed Mohamed · Cairo, Egypt</span><span>Figures from my employer are intentionally not published.</span></div></footer>
+
+<div class="ov" id="ov" hidden></div>
+<section class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="dTitle" hidden>
+  <div class="phd"><span id="crumb">case study</span><button class="x" id="px" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="pbody" id="pbody"></div>
+</section>
+
+<script>
+(function(){
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(pointer:fine)').matches;
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* progress */
+const prog=$('#prog');
+addEventListener('scroll',()=>{const h=document.documentElement;prog.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'},{passive:true});
+
+/* hero stack */
+const cards=[...document.querySelectorAll('#stackv .nt')];let top=0;
+function layout(){cards.forEach((c,i)=>{const k=(i-top+cards.length)%cards.length;
+  const y=k*26, s=1-k*0.06, o=k>2?0:1-k*0.28;
+  c.style.transform=`translateY(${y}px) scale(${s}) rotateX(${k?6:0}deg)`;c.style.opacity=o;c.style.zIndex=10-k;c.style.filter=k?`blur(${k*0.6}px)`:'none';})}
+layout();
+if(!RM){setInterval(()=>{if(document.hidden)return;const c=cards[top];c.style.transform='translateY(-40px) scale(1.02)';c.style.opacity=0;setTimeout(()=>{top=(top+1)%cards.length;layout()},450)},3200)}
+if(FINE&&!RM){const sv=$('#stackv');sv.addEventListener('pointermove',e=>{const r=sv.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;sv.style.transform=`rotateY(${x*8}deg) rotateX(${-y*6}deg)`});sv.addEventListener('pointerleave',()=>sv.style.transform='');sv.style.transition='transform .6s cubic-bezier(.16,1,.3,1)';sv.style.transformStyle='preserve-3d'}
+
+/* marquee */
+const TOOLS=['Jira Service Management','n8n','OpenAI GPT','Slack API','JumpCloud','Google Workspace','JQL','JavaScript','PowerShell','Google Sheets API','Notion API','BigQuery','React','macOS'];
+$('#mtrack').innerHTML=[...TOOLS,...TOOLS].map(t=>`<span>${esc(t)}</span>`).join('');
+
+/* chain (atlas tile) */
+const SM=[['Healthy','#34D399'],['Heads-up DM','#8B5CF6'],['Reminder','#FBBF24'],['Escalated','#F87171'],['Resolved','#34D399']];
+function runChain(el,cls){el.innerHTML=SM.map((s,i)=>(cls&&i?'<span class="ar">→</span>':'')+`<span class="${cls||''}" data-c="${s[1]}">${s[0]}</span>`).join('');
+  const ss=[...el.querySelectorAll('[data-c]')];let k=0;const p=()=>ss.forEach((e,j)=>{const on=j===k;e.classList.toggle('on',on);e.style.setProperty('--c',e.dataset.c);e.style.background=on?e.dataset.c:''});p();
+  if(!RM){const t=setInterval(()=>{if(!el.isConnected){clearInterval(t);return}k=(k+1)%ss.length;p()},1400)}}
+runChain($('#chain'));
+
+/* ticks (offboarding tile) */
+const tk=[...document.querySelectorAll('#ticks div')];let ti=0;
+function tick(){tk.forEach((d,i)=>d.classList.toggle('on',i<ti));ti=ti>=tk.length?0:ti+1}
+if(RM){tk.forEach(d=>d.classList.add('on'))}else{tick();setInterval(()=>{if(!document.hidden)tick()},900)}
+
+/* mfa phases */
+const ph=[...document.querySelectorAll('#phs div')],pf=document.getElementById('pfill');let pk=0;
+function phase(){ph.forEach((d,i)=>d.classList.toggle('on',i<=pk));pf.style.width=((pk+1)/ph.length*100)+'%';pk=(pk+1)%ph.length}
+if(RM){pk=ph.length-1;phase()}else{phase();setInterval(()=>{if(!document.hidden)phase()},1100)}
+/* spotlight on tiles */
+if(FINE){document.querySelectorAll('.tile').forEach(t=>t.addEventListener('pointermove',e=>{const r=t.getBoundingClientRect();t.style.setProperty('--x',(e.clientX-r.left)+'px');t.style.setProperty('--y',(e.clientY-r.top)+'px')}))}
+
+/* also built rows */
+const ALSO=[
+ ['0 9 * * *','Security Approval SLA report','Tickets stuck with Security over 3 days, posted daily at 09:00 with a live sheet, worst first.'],
+ ['15 * * * *','Live backlog sheet','Every ticket currently with IT, grouped by theme, refreshed hourly and linked from the dashboard.'],
+ ['0 8 * * 0-4','Morning snapshot','A daily queue digest for both regions with a one-line focus for the day.']
+];
+$('#rows').innerHTML=ALSO.map(a=>`<div class="row"><span class="cr">${esc(a[0])}</span><h4>${esc(a[1])}</h4><p>${esc(a[2])}</p></div>`).join('');
+
+/* reel */
+const reel=$('#reel');const step=()=>Math.min(396,reel.clientWidth*.86);
+$('#rPrev').onclick=()=>reel.scrollBy({left:-step(),behavior:RM?'auto':'smooth'});
+$('#rNext').onclick=()=>reel.scrollBy({left:step(),behavior:RM?'auto':'smooth'});
+
+/* journey */
+const JR=[
+ ['Early 2025','Joined a fintech IT team','Shadowed the team in Egypt, then took my own queue in April 2025.'],
+ ['2025 – 2026','Ownership grows','Egypt onboarding waves, device allocation, procurement and incident coordination.'],
+ ['May – Jun 2026','First builds live','The monthly review dashboard, then same-day offboarding.'],
+ ['2026','Atlas, both regions','SLA follow-up and queue answers inside Slack.'],
+ ['Sep 2026','Leading incidents','The CRM freeze RCA and email deliverability work.']
+];
+const jr=$('#jr');jr.insertAdjacentHTML('beforeend',JR.map(j=>`<div class="js"><div class="t">${esc(j[0])}</div><h4>${esc(j[1])}</h4><p>${esc(j[2])}</p></div>`).join(''));
+if(RM)jr.classList.add('in');else new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){jr.classList.add('in');o.disconnect()}},{threshold:.3}).observe(jr);
+
+/* reveal */
+if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove('pre');io.unobserve(en.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv').forEach((el,i)=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');el.style.transitionDelay=((i%4)*70)+'ms';io.observe(el)}})}
+
+/* ---------- case studies ---------- */
+function runSM(el){runChain(el,'s')}
+const chk='<svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>';
+const flow=(label,nodes)=>`<div class="lane"><div class="ll">${esc(label)}</div><div class="flow">${nodes.map((n,i)=>{const cls=n.startsWith('*')?' ai':(n.startsWith('^')?' src':'');const t=n.replace(/^[*^]/,'');return (i?'<span class="cn" aria-hidden="true"></span>':'')+`<span class="nd${cls}">${esc(t)}</span>`}).join('')}</div></div>`;
+const logs=a=>a.map((l,i)=>`<div class="log"><div class="lh"><b>FIX ${String(i+1).padStart(2,'0')}</b><span>${esc(l[0])}</span></div>${l[1]?`<p><i>Cause</i>${esc(l[1])}</p>`:''}<p><i>Fix</i>${esc(l[2])}</p>${l[3]?`<p><i>Verified</i>${esc(l[3])}</p>`:''}</div>`).join('');
+const ul=a=>'<ul>'+a.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';
+const outs=a=>'<div class="outs">'+a.map(o=>`<div class="out"><span class="l">${esc(o[0])}</span>${esc(o[1])}</div>`).join('')+'</div>';
+const CASES={
+ atlas:{shows:'system design · API integration · LLM guardrails · reliability debugging',crumb:'work / atlas',title:'Atlas: AI-assisted SLA follow-up in Slack',meta:['Designed & built solo','Maintainer','2026 · ongoing'],stack:['Jira Service Management','JQL','Jira REST API','n8n','JavaScript','OpenAI GPT','Slack','Google Sheets'],
+  outs:[['Before → after','Engineers stopped watching Jira by hand. At-risk tickets now come to them.'],['Escalation','Stalled tickets reach leadership automatically instead of breaching silently.'],['Answers','Queue questions answered in Slack in seconds, in the same numbers as the dashboard.']],
+  sec:[
+   ['Problem','<p>IT watched Jira by hand. Tickets aged quietly, breaches were caught late, and follow-up depended on memory. Managers couldn’t see how the queues were doing without digging through Jira.</p>'],
+   ['Investigation','<p>I broke the manual chase into steps: open the ticket, read the SLA clock, judge the risk, find the assignee in Slack, write the reminder, record it, then check back twice. Every step was repeatable, so every step could be automated. The engineer only needed to see the tickets that actually needed them.</p>'],
+   ['Solution',ul(['Scheduled SLA bots for both regional queues flag at-risk and breached tickets and DM the assignee.','Tickets that stay unactioned escalate automatically to a dedicated SLA escalations channel and a live breaches sheet.','An AI assistant in Slack answers questions about one ticket, a queue or the whole month in plain language, and returns the approved IT procedure for “how do I…” questions.','Engineers get a “Your Work Today” view with one-tap filters (Focus Today, Near SLA, Approval Blockers, Oldest Tickets, Quick Wins) and ticket cards with Summary, Next action, Related SOP and Open in Jira, plus snooze buttons.','Managers ask for open tickets by assignee and get a native Slack table that matches the dashboard.','A morning snapshot digest for both regions, Sunday to Thursday at 08:00.'])],
+   ['System','<div class="lanes">'+flow('Reminders',['^Jira SM (read-only)','n8n SLA bots','Rules: thresholds + de-dup','Slack DM to assignee'])+flow('Escalation',['n8n SLA bots','Google Sheets: tracker + log','Slack escalations channel'])+flow('Questions',['Slack question','*n8n AI agent · OpenAI GPT','Jira tools: count, search, stats, by assignee','Deterministic formatter','Slack reply'])+flow('Knowledge',['*n8n AI agent · OpenAI GPT','Approved SOP knowledge'])+'</div><p class="note" style="margin:0">Ticket lifecycle:</p><div class="sm" id="smFull"></div>'],
+   ['Implementation',logs([
+     ['Duplicate reminders every hour','The tracker sheet was read once per ticket instead of once per run. That hit the spreadsheet API quota, the de-dup write failed silently, and the same ticket fired again next hour.','Read once per run; added retries with back-off on the write.','The tracker is writing again and the duplicates stopped.'],
+     ['The model kept turning tables into bullet lists','Prompt rules alone were not reliable.','Added a deterministic post-processor that rewrites any “Name: count” list into a table before it reaches Slack.','Correct across repeated test runs.'],
+     ['Atlas and the dashboard disagreed on “open”','Two tools, two definitions.','Standardised on one status-based definition: open, excluding approval states, current month.','Counts match the dashboard.'],
+     ['Digest wording didn’t match its logic','The digest chose the focus region by risk but always said “lowest SLA”.','Made the wording conditional on how the focus was chosen.','']
+   ])],
+   ['Impact',ul(['Breach rates fell over the period Atlas was rolled out.','The share of alerts acted on, and of tickets resolved after an alert, rose month over month.','Nothing breaches silently: every stalled ticket is visible to leadership until it’s handled.'])],
+   ['Lessons',ul(['Enforce output format in code, not in prompts.','Silent failures hide in quotas. Verify at the destination, not in the workflow log.','Use one definition of “open” everywhere, or people stop trusting the numbers.','Automations read production data. They don’t write to it.'])],
+   ['Next','<div class="next"><b>PLANNED</b>Every ticket gets two reminders a day for two days before it escalates, regardless of age.</div>']
+  ]},
+ dashboard:{shows:'data pipelines · reporting for leadership · root-cause debugging',crumb:'work / executive-dashboard',title:'Executive IT Helpdesk Dashboard',meta:['Designed & built solo','Owner','May 2026 · ongoing'],stack:['Jira REST API','JQL','n8n','JavaScript','JSON','React (v1, Lovable)','Static hosting','Notion API'],
+  outs:[['Refresh','1× a month → 24× a day. The hand-built deck became a dashboard refreshed hourly.'],['Coverage','1 region → 2, in one view.'],['Access','Leadership opens the dashboard instead of waiting for month-end or asking IT.']],
+  sec:[
+   ['Problem','<p>Leadership got IT numbers from a slide deck built by hand once a month, covering one region. Anyone who wanted numbers in between had to ask IT.</p>'],
+   ['Solution','<p>A live dashboard for both regional queues, refreshed hourly. It shows the overview against target, headline metrics with an all / open / resolved lens, ticket categories, SLA met vs breached, tools, requesters, satisfaction with reviews, an IT action plan and key insights, per region and per month.</p>'],
+   ['Evolution','<div class="tline"><div><b>May 2026</b>v1: monthly review dashboard replaces the deck</div><div><b>Aug 2026</b>v2: new design, both regions</div><div><b>Aug 2026</b>Hourly refresh</div><div><b>Sep 2026</b>Security approvals trend card</div><div><b>Sep 2026</b>Live with-IT backlog sheet, one click from the KPI</div><div><b>Sep 2026</b>Meeting Rooms tab</div></div>'],
+   ['System','<div class="lanes">'+flow('Tickets',['^Jira REST API','n8n: fetch + compute per month','Sub-workflow per batch','JSON data file','Static hosting','Dashboard'])+flow('Security approvals',['^Jira count API','n8n hourly','Trend data','Dashboard card'])+flow('Backlog',['^Jira','n8n hourly','Sheet grouped by theme','Linked from KPI'])+flow('Meeting rooms',['^Notion checks database','n8n hourly','Rooms data','Dashboard tab'])+'</div>'],
+   ['Implementation',logs([
+     ['Out of memory','The dashboard went stale as monthly volume grew. The error blamed the compute step, but compute took seconds. n8n was holding every batch’s full Jira payload in memory for the whole run.','Moved fetch + compute into a sub-workflow called once per batch, so memory is released between batches. The compute code stayed unchanged, so the output stayed identical.','Every batch now completes. Trade-off: slower runs, fine for a scheduled refresh.'],
+     ['Wrong target badge','“Below target” was hard-coded in the compiled bundle, and the host can’t overwrite files inside sub-folders.','A small script in the page shell sets the badge from the real value on every month switch.','Correct across months and regions.'],
+     ['Blank page after deploy','A missing MIME type on upload.','Every deploy now sets it explicitly, and each file is backed up before it’s replaced.',''],
+     ['Which “SLA” is this?','The headline figure was a resolution rate. True SLA attainment (met ÷ met + breached) was computed separately.','Documented both definitions so leadership reads the right one.',''],
+     ['No SLA timer for security approval','The two queues record security approval differently.','The trend card counts status transitions out of “Waiting for security approval” per day, the one measure that works for both.','']
+   ])],
+   ['Impact',ul(['Refresh went from monthly to hourly.','Both regions are in one view.','Adopted by IT leadership as the SLA monitoring view.','First-time visibility of security approvals, the with-IT backlog by theme, and meeting-room health.'])],
+   ['Lessons',ul(['Error messages name the symptom, not the cause.','Back up before every deploy; check the live page after.','New visibility isn’t time saved. I only claim time for work that was actually done by hand.'])]
+  ]},
+ offboarding:{shows:'identity & access · security controls · safe automation',crumb:'work / offboarding',title:'Automated Employee Offboarding',meta:['Designed & built solo','Maintainer','Live since June 2026'],stack:['n8n','Jira Service Management','JumpCloud','Google Workspace','Slack','Mobile device management','Asset register'],
+  outs:[['Manual steps','14 → 0. Every access-removal step runs automatically at 18:00 on the last working day.'],['Audit','Every run leaves a written record on the ticket.'],['Follow-up','2 one-tap confirmations (laptop, internal tools), chased daily until done.']],
+  sec:[
+   ['Problem','<p>Removing a leaver’s access meant manual checks across several systems, follow-ups that depended on reminders, and an audit trail scattered across messages.</p>'],
+   ['Solution','<p>Offboarding ticket → reminder on the morning of the last working day → at 18:00 the workflow runs automatically, or early through a manual trigger → completion record posted to Jira and Slack → a daily Slack reminder with <b>Laptop collected</b> and <b>Internal tools deactivated</b> buttons until both are confirmed, recording who clicked and when.</p>'],
+   ['Automated','<div class="clock">▶ 18:00 · last working day</div><div class="check" id="chk">'+['Delete the directory account in both orgs','Remove all group memberships (removes SSO app access)','Unbind devices','Suspend Google Workspace','Deactivate Jira','Deactivate Slack','Wipe enrolled company phone','Identify the laptop by asset tag and serial','Post the audit record to the ticket'].map(t=>`<div><span class="cb">${chk}</span>${esc(t)}</div>`).join('')+'</div><p class="note" style="margin:6px 0 0">Still manual, tracked rather than assumed:</p><div class="check">'+['Google Drive ownership transfer','Laptop collection','Internal tools outside SSO'].map(t=>`<div class="man"><span class="cb"></span>${esc(t)}</div>`).join('')+'</div>'],
+   ['System','<div class="lanes">'+flow('Run',['^Jira offboarding ticket','n8n schedule 18:00','JumpCloud · Google · Jira · Slack · MDM','Completion record'])+flow('Follow-up',['Completion record','Daily Slack buttons','Confirmed: who & when','Audit trail'])+'</div>'],
+   ['Implementation',logs([['Laptop missing from the summary','An earlier fix rerouted device suspension and cut off the device-details step.','Restored it with a safe read that falls back cleanly when a leaver has no device.','The record names the exact laptop and serial to collect.']])],
+   ['Impact',ul(['Same-day access removal on every last working day.','Manual work reduced to exceptions and confirmations.','Leadership has a clear record of what happened on each offboarding.'])],
+   ['Lessons',ul(['Offboarding is a security control, not an admin task.','What can’t be automated yet should be chased automatically.','Destructive automations are verified through the code path and the next real run, never by test-running them on real accounts.'])],
+   ['Next','<div class="next"><b>PLANNED</b>Automate Drive ownership transfer and non-SSO tools, then bring the same approach to onboarding so access arrives on day one.</div>']
+  ]},
+ email:{shows:'incident ownership · domain infrastructure · BigQuery analysis · cross-team coordination',crumb:'work / email-deliverability',title:'Email Deliverability & Domain Authentication',meta:['Incident owner & coordinator','P0','2026'],stack:['Google Workspace','BigQuery','DNS','SPF / DKIM / DMARC','Mandrill','Salesforce'],
+  outs:[['Problem','The corporate domain was blocklisted repeatedly, and mail to external parties, including a regulator, was rejected.'],['Root cause','My domain-wide sender audit showed bulk and automated mail on the bare domain reaching complaint-prone and unverified recipients.'],['Fix','Bulk senders moved onto dedicated, authenticated subdomains, with customer replies kept on the familiar address.']],
+  sec:[
+   ['Problem','<p>The main corporate domain was listed on a major email blocklist several times in a few weeks. Everyday company mail shared the domain with bulk and automated senders, so every listing put ordinary correspondence at risk too, including confirmed rejections from a regulator. Delisting requests stopped working: the blocklist would only clear once bulk sending from the domain stopped.</p>'],
+   ['Investigation','<ul><li>Early checks of the support mail paths found no listing-grade signal, but spam traps generate no complaints or bounces, so those checks could not rule them out.</li><li>I built a domain-wide sender audit from the data warehouse in BigQuery, covering every system sending as the domain. It showed one automated reminder stream as the dominant bulk sender on the bare domain.</li><li>Its spam complaints landed one day before two of the listings, which made it the strongest identified trigger. Later blocklist feedback also named support and partnership mail sent to stale lists, so I documented the cause as a domain-wide isolation problem, not a single sender.</li></ul>'],
+   ['Solution','<ul><li>Standing rule adopted: no bulk mail from the bare domain. Every bulk sender gets its own subdomain.</li><li>The dominant sender moved first, with SPF and DKIM records published and every template updated.</li><li>For support mail, agents and customers needed the change to be invisible. I designed it so the From address moved to a support subdomain while Reply-To stayed on the familiar address.</li><li>I coordinated security, the email platform owners, the CRM team and the business teams on order, ownership and DNS changes.</li></ul>'],
+   ['System','<div class="lanes">'+flow('Diagnosis',['^Data warehouse (BigQuery)','Domain-wide sender audit','Dominant sender + complaint timing','Root cause'])+flow('Sending',['Bulk sender','Dedicated subdomain','SPF · DKIM · DMARC','Inbox'])+flow('Replies',['Customer reply','MX on subdomain','Routing','Existing support inbox'])+'</div>'],
+   ['Implementation',logs([
+     ['A re-send list that would have been wrong','The CRM status that looked like "bounced" actually meant "draft".','Caught in QA before use. Rebuilt the failed-delivery list from Google Workspace delivery logs, the real bounce events.','Accurate list, most failures confirmed as recipient-side.']
+   ])],
+   ['Impact',ul(['The domain came off the blocklist, and the largest bulk sender now runs on its own subdomain.','Support mail moved without agents or customers changing the address they use.','I wrote the RCA and runbook, with an evidence log and closure criteria. The incident stays open until the remaining senders move and an observation period passes clean.'])],
+   ['Lessons',ul(['Separate bulk mail from the domain your people depend on.','A clean check only proves what it can measure. Spam traps never complain.','Sending and receiving are separate DNS problems: SPF and DKIM don\u2019t give you MX.'])]
+  ]},
+ mfa:{shows:'identity security · phased change management · vendor escalation · compliance',crumb:'work / device-mfa',title:'Company-wide device MFA rollout',meta:['Project owner','Planned & ran','2025 – 2026'],stack:['JumpCloud','MFA / TOTP','macOS','Windows','Google Sheets','Notion'],
+  outs:[['Scope','Every company laptop across three entities, macOS and Windows.'],['Constraint','Zero permanent lockouts. Nobody could lose access to their work.'],['Result','Rolled out in phased waves with a tested recovery path, and zero permanent lockouts.']],
+  sec:[
+   ['Problem','<p>A regulatory audit observation required MFA on every company laptop, not just on cloud apps. The fleet mixed macOS and Windows across three entities, people used different sign-in methods, and some had no company device at all. A bad rollout would lock people out of their machines.</p>'],
+   ['Approach',ul(['Assess: exported MFA status for every user and split them by entity, role and sign-in method. Executives, IT, contractors and users without devices were each handled separately.','Pilot on IT and Security first, on both Windows and macOS, then on a group of regular users across regions.','Roll out company-wide in waves, tracking activation per wave, and do executives last with one-to-one support.','Verify with a final compliance report and a closure summary.'])],
+   ['Recovery design',ul(['A documented fallback and recovery plan per region, tested before the waves started.','A user guide for Windows and macOS, including what to do after losing a phone.','A clear rule: Touch ID alone doesn\u2019t count as MFA unless combined with a token.'])],
+   ['Blockers handled',ul(['Security-key users: device MFA wasn\u2019t enforced for them. I worked with the vendor on a fix and tested it before production.','Windows biometrics: sign-in clashed with device MFA. I escalated to the vendor and held the manager cohort back rather than risk disrupting leadership.','Contractors and users without devices: I worked on a device or VPN approach with the Compliance team.','Out of scope, documented: service accounts, suspended accounts and users who couldn\u2019t use phones on site.'])],
+   ['Impact',ul(['The large majority of active users covered across all three entities, with MFA validated on both operating systems.','Zero permanent lockouts through the whole rollout.','Remaining cohorts tracked with clear owners and blockers.'])],
+   ['Lessons',ul(['Segment before you enforce: every cohort fails differently.','Test the recovery path before the first wave, not after the first lockout.','Holding a cohort back is a valid decision when the vendor fix isn\u2019t ready.'])]
+  ]},
+ browser:{shows:'troubleshooting under pressure · endpoint management · cross-team coordination · honest RCA',crumb:'incidents / crm-freeze',title:'Business-critical CRM freezing for support agents',meta:['Browser mitigation lead','RCA author'],stack:['JumpCloud','PowerShell','Chrome','Incident platform','Notion'],
+  outs:[['Symptom','The CRM froze for support agents and forced them offline, often at the start of shifts.'],['Root cause','Not conclusively confirmed. The RCA says so.'],['Resolution','All tracked users moved to the fixed browser version, with updates re-enabled.']],
+  sec:[
+   ['Timeline','<div class="tline"><div><b>Day 1</b>Network ruled out; vendor case opened.</div><div><b>Day 2</b>Vendor configuration changes tried, no fix; escalated.</div><div><b>Day 3</b>Vendor guidance pointed to a Chromium issue: a browser flag, or a rollback to Chrome 152. The flag didn’t hold. The rollback worked for many users.</div><div><b>Days 3–6</b>I pushed the rollback through JumpCloud with auto-update disabled locally and in JumpCloud, and tracked affected users.</div><div><b>Day 7</b>Vendor confirmed a fix in Chrome 153; phased return with updates re-enabled.</div><div><b>Day 12</b>All tracked users reported on Chrome 153.</div></div>'],
+   ['Root cause','<p><span class="tag warn">Not conclusively confirmed</span></p><p>The vendor linked the freezes to a Chromium compatibility defect. The incident record doesn’t consistently show whether it belonged to 152 or 153, so my RCA states that uncertainty instead of picking a version.</p>'],
+   ['What I did',ul(['Validated the rollback on an affected device.','Built and pushed the downgrade through JumpCloud.','Disabled auto-update locally and in JumpCloud so patching couldn’t undo the fix.','Wrote the PowerShell script that removes version pins and re-enables updates for the return to 153.','Tracked affected users and chased confirmation.','Wrote the RCA from the incident record.'])],
+   ['Lessons',ul(['Browser versions are a dependency of business-critical SaaS.','Patch policies can silently undo a mitigation.','An RCA should say “not confirmed” when it isn’t.'])],
+   ['Follow-up','<div class="next"><b>RECOMMENDED</b>A managed browser-version strategy in JumpCloud for critical apps.</div>']
+  ]}
+};
+
+const ORDER=['mfa','atlas','offboarding','dashboard','email'];
+const BG=[document.getElementById('top'),document.querySelector('.nav'),document.querySelector('footer')];
+/* set your public email here to show the Copy email button */
+const EMAIL='';
+if(EMAIL){const cb=$('#copyEmail'),et=$('#emailTxt');cb.hidden=false;et.hidden=false;et.textContent=EMAIL;cb.onclick=async()=>{try{await navigator.clipboard.writeText(EMAIL);cb.firstChild.textContent='Copied '}catch(e){const r=document.createRange();r.selectNodeContents(et);const s=getSelection();s.removeAllRanges();s.addRange(r)}}}
+const ov=$('#ov'),panel=$('#panel'),pb=$('#pbody');let last=null;
+const slug=s=>s.toLowerCase().replace(/[^a-z]+/g,'-');
+function openCase(id,from){const c=CASES[id];if(!c)return;last=from||document.activeElement;
+  $('#crumb').textContent=c.crumb;const nx=ORDER[(ORDER.indexOf(id)+1)%ORDER.length];
+  pb.innerHTML=`<h2 class="ptitle" id="dTitle">${esc(c.title)}</h2>
+   <div class="pmeta">${c.meta.map(m=>`<span class="tag">${esc(m)}</span>`).join('')}</div>
+   <div class="pchips">${c.stack.map(m=>`<span>${esc(m)}</span>`).join('')}</div>
+   ${c.shows?`<p class="shows p"><b>Shows</b>${esc(c.shows)}</p>`:''}
+   ${outs(c.outs)}
+   <nav class="jump" aria-label="Sections">${c.sec.map(s=>`<a href="#p-${slug(s[0])}" data-jump="p-${slug(s[0])}">${esc(s[0])}</a>`).join('')}</nav>
+   ${c.sec.map((s,i)=>`<div class="dsec" id="p-${slug(s[0])}" style="animation-delay:${Math.min(i,5)*70}ms"><h4>${esc(s[0])}</h4>${s[1]}</div>`).join('')}
+   <div class="pnext"><button class="b2" data-open="${nx}">Next: ${esc(CASES[nx].title)} →</button></div>`;
+  pb.scrollTop=0;ov.hidden=false;panel.hidden=false;document.body.style.overflow='hidden';BG.forEach(el=>{if(el){el.setAttribute('aria-hidden','true');el.inert=true}});
+  requestAnimationFrame(()=>{ov.classList.add('show');panel.classList.add('show')});
+  const smf=$('#smFull');if(smf)runSM(smf);
+  const ck=$('#chk');if(ck){const it=[...ck.children];if(RM)it.forEach(x=>x.classList.add('done'));else it.forEach((x,i)=>setTimeout(()=>x.classList.add('done'),500+i*200))}
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  setTimeout(()=>$('#px').focus(),80)}
+function closeCase(){ov.classList.remove('show');panel.classList.remove('show');document.body.style.overflow='';BG.forEach(el=>{if(el){el.removeAttribute('aria-hidden');el.inert=false}});
+  setTimeout(()=>{ov.hidden=true;panel.hidden=true},RM?0:550);
+  try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+  if(last&&last.focus)last.focus()}
+document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o){e.preventDefault();openCase(o.dataset.open,o);return}
+  const j=e.target.closest('[data-jump]');if(j){e.preventDefault();const t=document.getElementById(j.dataset.jump);if(t)t.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}});
+$('#px').onclick=closeCase;ov.onclick=closeCase;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)closeCase();
+  if(e.key==='Tab'&&!panel.hidden){const f=[...panel.querySelectorAll('button,a[href]')].filter(x=>x.offsetParent!==null);if(!f.length)return;
+    if(e.shiftKey&&document.activeElement===f[0]){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&document.activeElement===f[f.length-1]){e.preventDefault();f[0].focus()}}});
+let ty=null;panel.addEventListener('touchstart',e=>{ty=pb.scrollTop<=0?e.touches[0].clientY:null},{passive:true});
+panel.addEventListener('touchend',e=>{if(ty!==null&&e.changedTouches[0].clientY-ty>120)closeCase();ty=null});
+const h=(location.hash||'').slice(1);if(CASES[h])setTimeout(()=>openCase(h),300);
+})();
+</script>
+
+</body>
+</html>
